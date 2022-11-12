@@ -1,0 +1,28 @@
+172.18.0.1 03:55:00am [DEBUG] This is a debug message
+
+172.18.0.1 03:55:00am [WARNING] This is a warning message
+
+172.18.0.1 03:55:00am [ERROR] This is an error message
+
+172.18.0.1 03:55:00am [INFO] This is a info message
+
+172.18.0.1 03:55:50am [DEBUG] This is a debug message
+172.18.0.1 03:55:50am [WARNING] This is a warning message
+172.18.0.1 03:55:50am [ERROR] This is an error message
+172.18.0.1 03:55:50am [INFO] This is a info message
+172.18.0.1 03:56:07am [DEBUG] This is a debug message
+172.18.0.1 03:56:07am [WARNING] This is a warning message
+172.18.0.1 03:56:07am [ERROR] This is an error message
+172.18.0.1 03:56:07am [INFO] This is a info message
+172.18.0.1 04:02:09am [] This is a debug message
+172.18.0.1 04:02:09am [] This is a warning message
+172.18.0.1 04:02:09am [] This is an error message
+172.18.0.1 04:02:09am [] This is a info message
+172.18.0.1 04:02:23am [] This is a debug message
+172.18.0.1 04:02:23am [] This is a warning message
+172.18.0.1 04:02:23am [] This is an error message
+172.18.0.1 04:02:23am [] This is a info message
+172.18.0.1 04:03:32am [] This is a debug message
+172.18.0.1 04:03:32am [] This is a warning message
+172.18.0.1 04:03:32am [] This is an error message
+172.18.0.1 04:03:32am [] This is a info message
