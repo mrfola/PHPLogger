@@ -16,19 +16,17 @@ class Logger
   
   public static $writeToFile = true;
   public static $writeToScreen = true;
-  private static $logEntries = [];
+  public static $logFileName ="app.log";
+
 
   //Logs the message to file or screen as needed
   private static function log($logEntry, $logType)
   {
       //Preparing the log entry in the appropriate format
-      $logEntry = self::formatLogEntry($logEntry);
-
-      //Storing each log entry into our log entries array
-      self::$logEntries[] = $logEntry;
+      $logEntry = self::formatLogEntry($logEntry, $logType);
 
       //Writing each log to file or screen depending on setting
-      if(self::$writeToFile) file_put_contents("app.log", $logEntry, FILE_APPEND);
+      if(self::$writeToFile) file_put_contents(self::$logFileName, $logEntry, FILE_APPEND);
       if(self::$writeToScreen) file_put_contents("php://output", $logEntry, FILE_APPEND);
 
   }
@@ -58,7 +56,7 @@ class Logger
   }
 
   //Takes the user log message and formats appropriately.
-  private static function formatLogEntry($logEntry)
+  private static function formatLogEntry($logEntry, $logType)
   {
     $curTime = date("h:i:sa");
     $curIP = $_SERVER["REMOTE_ADDR"];
@@ -66,18 +64,6 @@ class Logger
     $logEntry = $curIP . " " . $curTime . " [$logType] " . $logEntry . PHP_EOL;
     
     return $logEntry;
-  }
-  
-  //Write all logs to a specified file
-  public static function logToFile($filePath)
-  {
-    if(!$filePath || !file_exists($filePath)) throw new Exception ("Please pass a valid file");
-
-    $file = fopen($filePath, "a");
-
-    foreach(self::$logEntries as $log) fwrite($file, $log);    
-    
-    fclose($file);
   }
 
   //Clears all logs
